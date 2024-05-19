@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="CSS/mobile.css">
     <link rel="stylesheet" href="CSS/materi.css">
     <link rel="stylesheet" href="CSS/IsiMateri.css">
+    <link rel="stylesheet" href="CSS/mobile.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link
@@ -148,7 +151,7 @@
                     <div class="materi-image-image soal-image-image-bab1">
                         <img src="image/materi-1.png" alt="" class="materi-image-image-img">
                         <p class="materi-image-image-des">Makhluk Hidup dan Lingkungannya</p>
-                        <p class="materi-image-image-button soal-image-image-button-click">LATIHAN</p>
+                        <a href="soal-1.html" class="a_href"><p class="materi-image-image-button soal-image-image-button-click">LATIHAN</p></a>
                         <p style="opacity: 0; font-size: 1.2rem;">p</p>
                     </div>
                     <div class="materi-image-image soal-image-image-bab2">
@@ -215,33 +218,8 @@
         </section>
 
         <!--===================== GAME =========================-->
-        <section class="game">
-            <img src="image/back.png" alt="" id="back" class="back-game back-game-1">
-            <div class="game-text">
-                <h1 class="game-text-judul">GAME</h1>
-                <div class="game-text-des1">
-                    <p class="game-text-des">Belajar IPAS Berbasis Online</p>
-                    <p class="game-text-des">Untuk Kelas 10</p>
-                </div>
-            </div>
-
-            <div class="game-image">
-                <div class="game-image-image game-image-image-game1">
-                    <img src="image/game-game.png" alt="" class="game-image-image-img">
-                    <p class="game-image-image-des">( Benar Atau Salah )</p>
-                </div>
-
-                <div class="game-image-image game-image-image-game2">
-                    <img src="image/game-game.png" alt="" class="game-image-image-img">
-                    <p class="game-image-image-des">( A B C Atau D )</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- =============== BENAR ATAU SALAH ============ -->
         <section class="game-section-1">
             <img src="image/back.png" alt="" id="back" class="back-game-2">
-            <img src="image/back.png" alt="" id="back-mobile" class="back-game-2-mobile">
             <div class="game-text">
                 <h1 class="game-text-judul">GAME</h1>
                 <div class="game-text-des1">
@@ -250,15 +228,17 @@
                 </div>
             </div>
             <div class="game-container">
+                <img src="image/star-game.png" alt="" class="star-game-new">
+                <img src="image/timer-game.png" alt="" class="timer-game-new">
                 <div class="game1-top">
                     <p id="scoreDisplay" class="game1-score"><span id="score">-</span></p>
                     <p class="game1-timer"><span id="timer">40</span></p>
                 </div>
                 <div class="game1-quest">
-                    <h1 id="question">Jawab Pertanyaan sebelum waktu habis</h1>
+                    <h1 id="question" style="font-weight: 600;">Jawab Pertanyaan sebelum waktu habis</h1>
                 </div>
-                <button id="startButton"  class="game1-button-start">Mulai</button>
-                <div class="game1-answer">
+                <button id="startButton"  class="game1-button-start">MAIN</button>
+                <div class="game1-answer" id="two-button">
                     <button id="trueButton" class="game1-button-answer" disabled>✔</button>
                     <button id="falseButton" class="game1-button-answer"  disabled>X</button>
                 </div>
@@ -276,57 +256,6 @@
                     <p class="game-text-des">Untuk Kelas 10</p>
                 </div>
             </div>
-            <div class="start_btn"><button>Mulai</button></div>
-            <div class="info_box">
-            <div class="info-title"><span>Aturan</span></div>
-            <div class="info-list">
-                <div class="info">1. Kamu punya waktu <span>15 detik</span> per satu pertanyaan.</div>
-                <div class="info">2. Jika kamu sudah memilih jawaban maka tidak bisa di ganti.</div>
-                <div class="info">3. Kamu tidak bisa keluar saat permainan berlangsung</div>
-                <div class="info">4. Jawaban Benar akan berwarna biru dan salah akan berwarna Merah</div>
-                <div class="info">5. Hasil Jawaban yang berhasil di jawab akan di tampilkan di akhir</div>
-            </div>
-            <div class="buttons">
-                <button class="quit">Keluar Quiz</button>
-                <button class="restart">Mulai</button>
-            </div>
-        </div>
-        <div class="quiz_box">
-            <header>
-                <div class="title">A B C Quiz</div>
-                <div class="timer">
-                    <div class="time_left_txt">Waktu</div>
-                    <div class="timer_sec">15</div>
-                </div>
-            </header>
-            <section class="section">
-                <div class="que_text">
-                    <!-- Here I've inserted question from JavaScript -->
-                </div>
-                <div class="option_list">
-                    <!-- Here I've inserted options from JavaScript -->
-                </div>
-            </section>
-            <footer>
-                <div class="total_que">
-                    <!-- Here I've inserted Question Count Number from JavaScript -->
-                </div>
-                <button class="next_btn">Lanjut</button>
-            </footer>
-        </div>
-        <div class="result_box">
-            <div class="icon">
-                <i class="fas fa-crown"></i>
-            </div>
-            <div class="complete_text">Kamu berhasil Menyelesaikan</div>
-            <div class="score_text">
-                <!-- Here I've inserted Score Result from JavaScript -->
-            </div>
-            <div class="buttons">
-                <button class="restart">Main Lagi</button>
-                <button class="quit">Keluar Quiz</button>
-            </div>
-        </div>
         </section>    
   
         <!-- =================== TEAM ======================= -->
@@ -503,6 +432,10 @@
             </section>
 
         </section>
+
+        <div class="team-group">
+            <i class="ri-group-line"></i>
+        </div>
         
         <!-- ===================== MOBILE ===================== -->
         <section class="navigation">
@@ -535,14 +468,38 @@
                 <li class="list" id="setting-mobile">
                     <a href="#">
                         <span class="icon">
-                            <i class="ri-settings-5-line"></i>
+                            <i class="ri-key-2-fill"></i>
                         </span>
-                        <span class="text">SETTING</span>
+                        <span class="text">CODE</span>
                     </a>
                 </li>
                 
                 <div class="indicator tema-1" id="default-mobile"></div>
             </ul>
+        </section>
+
+
+
+
+
+        <!-- ======================== KEY ============================ -->
+        <section class="mobile-key setting-mobile-new" id="setting-mobile-key">
+            <img src="image/back.png" alt="" id="back" class="back-game-2">
+            <div class="game-text">
+                <h1 class="game-text-judul">BIBO</h1>
+                <div class="game-text-des1">
+                    <p class="game-text-des">KUNCI JAWABAN BIBO</p>
+                </div>
+            </div>
+            <section class="scrollbox-inner-password" id="key-mobile-password">
+                <div class="header-soal-1-logo back-soal-1-logo-close-password">
+                    <i class="ri-close-line"></i>
+                </div>
+                <form class="password-form" id="password-form">
+                    <input type="password" id="password" name="password" required class="password password-mobile" placeholder="password"><br><br>
+                    <button type="submit" class="kirim">Kirim</button>
+                </form>
+            </section>
         </section>
 
 <!-- -------------------------------------------------------------------------------------------------------------------------------- -->
@@ -653,159 +610,186 @@
 
 
 <!-- ----------------------------------------------------------------------------------------------------------------------------------= -->
-<!-- ----------------------------------------------- SOAL ---------------------------------------------------------------------- -->
+<!-- ----------------------------------------------- KUNCI JAWABAN ---------------------------------------------------------------------- -->
 <!-- ----------------------------------------------------------------------------------------------------------------------------------- -->
-        <section class="soal-bab1-isi">
-            <img src="image/back.png" alt="" id="back" class="back-soal-bab1-isi">
-            <img src="image/back.png" alt="" id="back-mobile" class="back-soal-bab1-isi-mobile">
-            <div class="materi-text-bab1-isi-a">
-                <h1 class="materi-text-judul-bab1-isi-a">BAB 1</h1>
-            </div>
 
-
-
-
-            <div class="soal-bab-1-isi-click">
-                <div class="soal-bab-1-isi-click-all soal-bab-1-isi-click-multiple">
-                    <i class="ri-chat-poll-line"></i>
-                    <p>PILIHAN GANDA</p>
-                </div>
-                <div class="soal-bab-1-isi-click-all soal-bab-1-isi-click-uraian">
-                    <i class="ri-questionnaire-line"></i>
-                    <p>URAIAN</p>
-                </div>
-            </div>
-
-            <nav class="sidebar soal-bab-1-pilihan-ganda">
-                <div class="header-soal-1">
-                    <h2>PILIHAN GANDA</h2>
-                    <div class="header-soal-1-logo header-soal-1-logo-close-multiple">
-                        <i class="ri-close-line"></i>
+    <section class="container" id="team-new" >
+        <div class="card__container swiper">
+        <div class="card__content">
+            <div class="swiper-wrapper">
+                <article class="card__article swiper-slide">
+                    <div class="header-soal-1-logo" id="key-close-kunci-jawab" style="top: -0.4rem; right: -0.4rem; background-color: #2386c44b; color: white; border: 2px solid rgb(255, 255, 255);">
+                        <i class="ri-close-line"></i> 
                     </div>
-                </div>
-                <div class="scrollbox">
-                    <div class="scrollbox">
-                        <div class="scrollbox-inner">
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam culpa quam repellat ipsam architecto atque voluptatem omnis dolor est reiciendis voluptas provident molestiae fugiat deserunt totam similique, excepturi modi consequatur?
-                            Inventore eos impedit dolore ducimus officiis vero, sed ea accusamus tempore quos recusandae accusantium error, eaque praesentium iusto deserunt, reprehenderit adipisci maxime! Commodi unde dolore, labore eum ex nostrum veritatis!
-                            Odit, alias, officia minus, officiis aut voluptatum eveniet consequuntur dolores harum unde eius nostrum sequi quos quis! Corporis ex tempora, magnam et error unde quaerat aliquam iusto soluta! Corporis, itaque.
-                            Animi quos omnis quaerat. Modi sint praesentium amet labore? Saepe dolor non minus itaque pariatur doloribus error ipsam modi iste ab ducimus, fuga perferendis? Soluta omnis a distinctio quibusdam perferendis?
-                            Consequatur, ab dolor consectetur ipsum dicta quae dolores sequi pariatur ipsam repellendus corrupti mollitia, animi, exercitationem nulla laborum quas quos rerum explicabo libero qui et odit id. Dolore, repudiandae quibusdam.
-                            Velit fugiat eligendi consectetur ex odit rem quasi earum nostrum molestiae hic eius iusto placeat voluptas, accusamus fuga doloribus eos soluta recusandae. Accusantium animi reprehenderit optio veritatis esse quibusdam nesciunt.
-                            Deleniti labore expedita magnam rem sapiente molestiae beatae repellat facilis harum doloremque ea commodi obcaecati perferendis earum ratione accusamus veritatis, necessitatibus quibusdam voluptate omnis. Minus iure tenetur molestiae consectetur voluptatum.
-                            Consequatur obcaecati itaque earum. Ullam, doloremque modi ipsam molestiae officia inventore nisi sint cupiditate consequuntur corporis atque delectus earum excepturi non eligendi? Molestiae omnis ad iste officiis ratione eum vel.
-                            Totam sunt animi hic itaque eius a, delectus odio quasi sed asperiores quod soluta ab unde qui perferendis dicta atque ipsam. Architecto libero soluta, laborum culpa porro laboriosam molestias rerum.
-                            Eveniet cumque vero illo tempora earum, eius voluptate. Voluptatem sunt nihil, sint aspernatur eligendi autem? Dicta, cum, eveniet dignissimos obcaecati eaque incidunt harum placeat saepe vel quia consequatur, suscipit provident.
-                            Saepe ipsum repellat corrupti at, quae nisi asperiores vel. Harum commodi ad voluptas non quasi animi nostrum consequuntur? Debitis perferendis dolorem voluptatibus tempore delectus quam asperiores eos laudantium nisi magnam.
-                            Iure nesciunt ab quasi corrupti mollitia autem consequuntur saepe repudiandae nemo deleniti, at impedit aspernatur voluptate hic doloremque reprehenderit ipsa sint natus. Blanditiis aperiam veritatis facilis! Enim quasi cumque aliquam.
-                            Sunt qui maxime, expedita autem obcaecati voluptatibus minus molestiae, corporis rerum magnam rem officia praesentium at ut, debitis delectus? Repudiandae architecto culpa explicabo, quasi sapiente corrupti sit tempora perferendis est.
-                            Magnam distinctio, ea, reprehenderit quae, temporibus optio perspiciatis facere officia quia itaque cumque nostrum! Aliquam rerum quas recusandae rem soluta distinctio aspernatur beatae laborum! Commodi quidem incidunt minima ducimus tenetur.
-                            Nisi facilis quam vitae numquam consectetur odit consequatur, adipisci incidunt vel a. Quia minus officia dolore eaque eveniet consectetur doloribus iure, numquam reprehenderit sunt. Illum temporibus fuga inventore ipsa doloremque?
-                            Voluptatibus assumenda est amet itaque reprehenderit cupiditate, libero incidunt recusandae facere velit ad praesentium saepe tempora nihil qui sunt soluta tempore illum architecto ducimus ea ab nulla? Quos, dolores reiciendis.
-                            Sit unde eveniet autem aperiam quas quasi, earum necessitatibus praesentium error natus quisquam porro aut recusandae exercitationem obcaecati voluptates ea? Quo minus quia quaerat! Reprehenderit ipsa accusamus sunt voluptatum ratione?
-                            Enim facilis rerum minus? Dolorem sapiente ullam, iusto dignissimos tempore pariatur omnis fuga laborum enim accusantium nihil repellendus perspiciatis exercitationem. Ipsum distinctio laborum aperiam magnam sequi similique sapiente tenetur alias.
-                            Expedita, culpa ducimus autem consequuntur magnam dignissimos est, omnis debitis qui veniam dolore, facere velit? Corrupti odio aut illo quos voluptatibus, ducimus nihil ipsam rem enim sapiente! Odio, illum quisquam.
-                            Ratione ea maiores odit rerum, voluptatibus fuga beatae incidunt soluta non veritatis itaque nesciunt est quasi, ut officia iste tempore amet, esse quibusdam quod. Porro eos dolore id facere alias.</p>
+                    <div class="card__image">
+                    <img src="image/Ahmed-BG.png" alt="image" class="card__img">
+                    <div class="card__shadow"></div>
+                    </div>
+    
+                    <div class="card__data">
+                    <h3 class="card__name">Kell Dawx</h3>
+                    <p class="card__description">
+                        Passionate about development and design, 
+                        I carry out projects at the request of users.
+                    </p>
+                    </div>
+                </article>
+    
+                <article class="card__article swiper-slide">
+                    <div class="card__image">
+                    <img src="image/Raka-BG.png" alt="image" class="card__img">
+                    <div class="card__shadow"></div>
+                    </div>
+    
+                    <div class="card__data">
+                    <h3 class="card__name">Lotw Fox</h3>
+                    <p class="card__description">
+                        Passionate about development and design, 
+                        I carry out projects at the request of users.
+                    </p>
+                    </div>
+                </article>
+    
+                <article class="card__article swiper-slide">
+                    <div class="card__image">
+                    <img src="image/Amara-BG.png" alt="image" class="card__img">
+                    <div class="card__shadow"></div>
+                    </div>
+    
+                    <div class="card__data">
+                    <h3 class="card__name">Sara Mit</h3>
+                    <p class="card__description">
+                        Passionate about development and design, 
+                        I carry out projects at the request of users.
+                    </p>
+                    </div>
+                </article>
+    
+                <article class="card__article swiper-slide">
+                    <div class="card__image">
+                    <img src="image/Jeki-BG.png" alt="image" class="card__img">
+                    <div class="card__shadow"></div>
+                    </div>
+    
+                    <div class="card__data">
+                    <h3 class="card__name">Jenny Wert</h3>
+                    <p class="card__description">
+                        Passionate about development and design, 
+                        I carry out projects at the request of users.
+                    </p>
+                    </div>
+                </article>
+
+                <article class="card__article swiper-slide">
+                    <div class="card__image">
+                    <img src="image/El-BG.png" alt="image" class="card__img">
+                    <div class="card__shadow"></div>
+                    </div>
+    
+                    <div class="card__data">
+                    <h3 class="card__name">Lexa Kin</h3>
+                    <p class="card__description">
+                        Passionate about development and design, 
+                        I carry out projects at the request of users.
+                    </p>
+                    </div>
+                </article>
+
+                <article class="card__article swiper-slide">
+                    <div class="card__image">
+                    <img src="image/Ofi-BG.png" alt="image" class="card__img">
+                    <div class="card__shadow"></div>
+                    </div>
+    
+                    <div class="card__data">
+                    <h3 class="card__name">Lexa Kin</h3>
+                    <p class="card__description">
+                        Passionate about development and design, 
+                        I carry out projects at the request of users.
+                    </p>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+
+    <nav class="sidebar"  id="key-mobile-bab-1">
+        <div class="header-soal-1">
+        <h2>KUNCI JAWABAN BAB 1</h2>
+        <div class="header-soal-1-logo" id="key-close-kunci-jawab">
+            <i class="ri-close-line"></i> 
+        </div>
+    </div>
+    <div class="scrollbox">
+        <div class="scrollbox">
+            <div class="scrollbox-inner-pertanyaan-tanyaan scrollbox-inner-pertanyaan-bab-1-multiple">
+                <div class="scrollbox-inner">
+                        <div class="scrollbox-inner-pertanyaan">
+                            <div class="scrollbox-inner-pertanyaan-tanya">1. Organ yang memiliki katup epiglotis adalah</div>
                         </div>
-                    </div>
-                </div>
-            </nav>
-
-            <nav class="sidebar soal-bab-1-pilihan-uraian">
-                <div class="header-soal-1">
-                    <h2>URAIAN</h2>
-                    <div class="header-soal-1-logo header-soal-1-logo-close-uraian">
-                        <i class="ri-close-line"></i>
-                    </div>
-                </div>
-                <div class="scrollbox">
-                    <div class="scrollbox">
-                        <div class="scrollbox-inner">
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam culpa quam repellat ipsam architecto atque voluptatem omnis dolor est reiciendis voluptas provident molestiae fugiat deserunt totam similique, excepturi modi consequatur?
-                            Inventore eos impedit dolore ducimus officiis vero, sed ea accusamus tempore quos recusandae accusantium error, eaque praesentium iusto deserunt, reprehenderit adipisci maxime! Commodi unde dolore, labore eum ex nostrum veritatis!
-                            Odit, alias, officia minus, officiis aut voluptatum eveniet consequuntur dolores harum unde eius nostrum sequi quos quis! Corporis ex tempora, magnam et error unde quaerat aliquam iusto soluta! Corporis, itaque.
-                            Animi quos omnis quaerat. Modi sint praesentium amet labore? Saepe dolor non minus itaque pariatur doloribus error ipsam modi iste ab ducimus, fuga perferendis? Soluta omnis a distinctio quibusdam perferendis?
-                            Consequatur, ab dolor consectetur ipsum dicta quae dolores sequi pariatur ipsam repellendus corrupti mollitia, animi, exercitationem nulla laborum quas quos rerum explicabo libero qui et odit id. Dolore, repudiandae quibusdam.
-                            Velit fugiat eligendi consectetur ex odit rem quasi earum nostrum molestiae hic eius iusto placeat voluptas, accusamus fuga doloribus eos soluta recusandae. Accusantium animi reprehenderit optio veritatis esse quibusdam nesciunt.
-                            Deleniti labore expedita magnam rem sapiente molestiae beatae repellat facilis harum doloremque ea commodi obcaecati perferendis earum ratione accusamus veritatis, necessitatibus quibusdam voluptate omnis. Minus iure tenetur molestiae consectetur voluptatum.
-                            Consequatur obcaecati itaque earum. Ullam, doloremque modi ipsam molestiae officia inventore nisi sint cupiditate consequuntur corporis atque delectus earum excepturi non eligendi? Molestiae omnis ad iste officiis ratione eum vel.
-                            Totam sunt animi hic itaque eius a, delectus odio quasi sed asperiores quod soluta ab unde qui perferendis dicta atque ipsam. Architecto libero soluta, laborum culpa porro laboriosam molestias rerum.
-                            Eveniet cumque vero illo tempora earum, eius voluptate. Voluptatem sunt nihil, sint aspernatur eligendi autem? Dicta, cum, eveniet dignissimos obcaecati eaque incidunt harum placeat saepe vel quia consequatur, suscipit provident.
-                            Saepe ipsum repellat corrupti at, quae nisi asperiores vel. Harum commodi ad voluptas non quasi animi nostrum consequuntur? Debitis perferendis dolorem voluptatibus tempore delectus quam asperiores eos laudantium nisi magnam.
-                            Iure nesciunt ab quasi corrupti mollitia autem consequuntur saepe repudiandae nemo deleniti, at impedit aspernatur voluptate hic doloremque reprehenderit ipsa sint natus. Blanditiis aperiam veritatis facilis! Enim quasi cumque aliquam.
-                            Sunt qui maxime, expedita autem obcaecati voluptatibus minus molestiae, corporis rerum magnam rem officia praesentium at ut, debitis delectus? Repudiandae architecto culpa explicabo, quasi sapiente corrupti sit tempora perferendis est.
-                            Magnam distinctio, ea, reprehenderit quae, temporibus optio perspiciatis facere officia quia itaque cumque nostrum! Aliquam rerum quas recusandae rem soluta distinctio aspernatur beatae laborum! Commodi quidem incidunt minima ducimus tenetur.
-                            Nisi facilis quam vitae numquam consectetur odit consequatur, adipisci incidunt vel a. Quia minus officia dolore eaque eveniet consectetur doloribus iure, numquam reprehenderit sunt. Illum temporibus fuga inventore ipsa doloremque?
-                            Voluptatibus assumenda est amet itaque reprehenderit cupiditate, libero incidunt recusandae facere velit ad praesentium saepe tempora nihil qui sunt soluta tempore illum architecto ducimus ea ab nulla? Quos, dolores reiciendis.
-                            Sit unde eveniet autem aperiam quas quasi, earum necessitatibus praesentium error natus quisquam porro aut recusandae exercitationem obcaecati voluptates ea? Quo minus quia quaerat! Reprehenderit ipsa accusamus sunt voluptatum ratione?
-                            Enim facilis rerum minus? Dolorem sapiente ullam, iusto dignissimos tempore pariatur omnis fuga laborum enim accusantium nihil repellendus perspiciatis exercitationem. Ipsum distinctio laborum aperiam magnam sequi similique sapiente tenetur alias.
-                            Expedita, culpa ducimus autem consequuntur magnam dignissimos est, omnis debitis qui veniam dolore, facere velit? Corrupti odio aut illo quos voluptatibus, ducimus nihil ipsam rem enim sapiente! Odio, illum quisquam.
-                            Ratione ea maiores odit rerum, voluptatibus fuga beatae incidunt soluta non veritatis itaque nesciunt est quasi, ut officia iste tempore amet, esse quibusdam quod. Porro eos dolore id facere alias.</p>
+                        <div class="scrollbox-inner-pertanyaan">
+                            <div class="scrollbox-inner-pertanyaan-tanya">2. Hewan yang bernafas dengan paru-paru adalah</div>
                         </div>
-                    </div>
+                        <div class="scrollbox-inner-pertanyaan">
+                            <div class="scrollbox-inner-pertanyaan-tanya">1. Organ yang memiliki katup epiglotis adalah</div>
+                        </div>
+                        <div class="scrollbox-inner-pertanyaan">
+                            <div class="scrollbox-inner-pertanyaan-tanya">1. Organ yang memiliki katup epiglotis adalah</div>
+                        </div>
                 </div>
-            </nav>
-        </section>
-
-
-
-
-
-        
-        <section>
-            <div class="team-1">
-                <i class="ri-settings-2-line"></i>
+                <p style="opacity: 0;">Lorem ipsum, dolor sit amet consectetur adipisicing </p>
             </div>
-            <div class="team-2">
-                <i class="ri-settings-6-line"></i>
+        </div>
+    </div>
+    </nav>
+
+    <nav class="sidebar"  id="key-mobile-bab-2">
+        <div class="header-soal-1">
+        <h2>KUNCI JAWABAN BAB 2</h2>
+        <div class="header-soal-1-logo" id="key-close-kunci-jawab">
+            <i class="ri-close-line"></i> 
+        </div>
+    </div>
+    <div class="scrollbox">
+        <div class="scrollbox">
+            <div class="scrollbox-inner-pertanyaan-tanyaan scrollbox-inner-pertanyaan-bab-1-multiple">
+                <div class="scrollbox-inner">
+                        <div class="scrollbox-inner-pertanyaan">
+                            <div class="scrollbox-inner-pertanyaan-tanya">1. Organ yang memiliki katup epiglotis adalah</div>
+                        </div>
+                        <div class="scrollbox-inner-pertanyaan">
+                            <div class="scrollbox-inner-pertanyaan-tanya">2. Hewan yang bernafas dengan paru-paru adalah</div>
+                        </div>
+                        <div class="scrollbox-inner-pertanyaan">
+                            <div class="scrollbox-inner-pertanyaan-tanya">1. Organ yang memiliki katup epiglotis adalah</div>
+                        </div>
+                        <div class="scrollbox-inner-pertanyaan">
+                            <div class="scrollbox-inner-pertanyaan-tanya">1. Organ yang memiliki katup epiglotis adalah</div>
+                        </div>
+                </div>
+                <p style="opacity: 0;">Lorem ipsum, dolor sit amet consectetur adipisicing </p>
             </div>
-    
-            <div class="setting">
-                <p class="setting-judul">SETTING</p>
-                <p class="setting-music-tema-judul">MUSIC</p>
-                <div class="setting-music-line"></div>
-                <div class="setting-music-tema-lagu">
-                    <p class="setting-music-tema-lagu-lagu setting-music-tema-lagu-lagu-opa-1 audio-11" id="audio-1">MUSIC 1</p>
-                    <p class="setting-music-tema-lagu-lagu setting-music-tema-lagu-lagu-opa-2 audio-22" id="audio-2">MUSIC 2</p>
-                    <p class="setting-music-tema-lagu-lagu setting-music-tema-lagu-lagu-opa-3 audio-33" id="audio-3">MUSIC 3</p>
-                </div>
-                <div class="setting-music">
-                    <p class="setting-music-on audio-on">ON</p>
-                    <p class="setting-music-off audio-off">OFF</p>
-                </div>
-                <p class="setting-tema-judul">TEMA</p>
-                <div class="setting-tema-line"></div>
-                <div class="setting-tema-background">
-                    <p class="setting-tema-background-tema setting-tema-background-tema-1" id="tema-1">TEMA 1</p>
-                    <p class="setting-tema-background-tema" id="tema-2">TEMA 2</p>
-                    <p class="setting-tema-background-tema" id="tema-3">TEMA 3</p>
-                </div>
-    
-                <div class="social-media-setting">
-                    <p class="setting-team-medsos" onclick="alert('Masih Dalam Tahap Pengembangan')"><i class='bx bx-conversation' ></i></p>
-                    <a href="https://www.instagram.com/biboeternal?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="  target="_blank" class="setting-team-ig"><i class='bx bxl-instagram' ></i></a>
-                    <p class="setting-team setting-team-medsos"><i class='bx bx-group' ></i></p>
-    
-                </div>
-            </div>
-    
-            <audio id="myAudio" controls loop class="audio-1">
-                <source src="image/Perfect.MP3" type="">
-            </audio>
-            <audio id="myAudio" controls loop class="audio-2">
-                <source src="image/biola.MP3" type="">
-            </audio>
-            <audio id="myAudio" controls loop class="audio-3">
-                <source src="image/tema-3.mp3" type="">
-            </audio>
-        </section>
+        </div>
+    </div>
+    </nav>
+
     </main>
 
 
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="JS/Team.js"></script>
+    <script src="JS/Team.js"></script> 
     <script src="JS/main.js"></script>
     <script src="JS/game.js"></script>
     <script src="JS/materi & Soal.js"></script>
+    <script src="JS/soal.js"></script>
+    <script src="JS/password.js"></script>
+
 </body>
 </html>
